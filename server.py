@@ -25,7 +25,17 @@ def get_config():
 @app.route('/img-classification/free',methods=['POST'])
 def post_free():
     # your code here
-
+    if request.is_json:
+        body = request.get_json()
+    else:
+        body = request.get_data()
+        body = json.dumps(body)
+    dataset =  body["dataset"]
+    v1=client.CoreV1Api()
+    print("free")
+    ret = v1.list_pod_for_all_namespaces(watch=False)
+    for i in ret.items:
+      print("%s\t%s\t%s" % (i.status.pod_ip, i.metadata.namespace, i.metadata.name))
     return "success"
 
 
