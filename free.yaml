@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: mp12-free
+  generateName: mp12-free
 spec:
   template:
     spec:

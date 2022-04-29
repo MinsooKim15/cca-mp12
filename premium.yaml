@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: mp12-premium
+  generateName: mp12-premium
 spec:
   template:
     spec:

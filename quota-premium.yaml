@@ -4,7 +4,7 @@ metadata:
   name: quota-premium
 spec:
   hard:
-    requests.cpu: "0.9"
-    requests.memory: 1Gi
-    limits.cpu: "2"
-    limits.memory: 2Gi
+    #requests.cpu: "0.9"
+    #requests.memory: 1Gi
+    #limits.cpu: "2"
+    #limits.memory: 2Gi
